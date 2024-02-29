@@ -1,7 +1,7 @@
 public class Application01 {
     public static void main(String[] args) {
         // 스캐너로 데이터 입력
-
+        Calculator.add(4, 7);
 
 
 
@@ -12,30 +12,37 @@ public class Application01 {
 
 
     public static class Calculator{
-        public int add(int x, int y){
+        public static void add(int x, int y){
 
             return 0;
         }
 
-        public int subtract(int x, int y){
-
-            return 0;
-        }
-
-        public int multiply(int x, int y){
-            return 0;
-        }
-
-
-        public int division(int x, int y) throws IllegalArgumentException{
-
-            if(y == 0) throw new IllegalArgumentException();
-
-            return 0;
+        public static void subtract(int x, int y){
 
         }
-        public int modulor(int x, int y) throws IllegalArgumentException{
-            return 0;
+
+        public static void multiply(int x, int y){
+
+        }
+
+
+        public static void division(int x, int y) throws IllegalArgumentException{
+            int ret =0;
+            try{
+               ret = x/y;
+            } catch (IllegalArgumentException e){
+                e.printStackTrace();
+            }
+
+
+        }
+        public static void modulor(int x, int y) throws IllegalArgumentException{
+            int ret =0;
+            try{
+                ret = x/y;
+            } catch (IllegalArgumentException e){
+                e.printStackTrace();
+            }
         }
 
     }
