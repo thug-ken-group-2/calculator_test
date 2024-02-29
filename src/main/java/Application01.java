@@ -72,23 +72,22 @@ public class Application01 {
 
 
         public static void division(int x, int y) throws IllegalArgumentException{
-            int ret =0;
-            try{
-               ret = x/y;
-            } catch (IllegalArgumentException e){
-                e.printStackTrace();
-            }
+           if(y == 0){
+               System.out.println("연산 불가능");
+               throw new IllegalArgumentException();
+           }
+            System.out.println(x/y);
 
 
         }
-        public static void modulor(int x, int y) throws IllegalArgumentException{
-            int ret =0;
-            try{
-                ret = x/y;
-            } catch (IllegalArgumentException e){
-                e.printStackTrace();
+        public static void modulor(int x, int y) throws IllegalArgumentException {
+            if(y==0){
+                System.out.println("연산 불가능");
+                throw new IllegalArgumentException();
             }
+            System.out.println(x%y);
         }
+
 
     }
 
