@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d37660a1-b576-4701-b33d-5173bc26c48c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/Application01.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Application01.java" afterDir="false" />
-    </list>
+    <list default="true" id="d37660a1-b576-4701-b33d-5173bc26c48c" name="Changes" comment="chan woo" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -73,10 +71,23 @@
       <updated>1709196058005</updated>
       <workItem from="1709196059037" duration="4000" />
     </task>
+    <task id="LOCAL-00001" summary="chan woo">
+      <option name="closed" value="true" />
+      <created>1709196937158</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1709196937158</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="chan woo" />
+    <option name="LAST_COMMIT_MESSAGE" value="chan woo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
