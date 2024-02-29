@@ -27,11 +27,14 @@ public class Application01 {
         }
 
 
-        public double division(int x, int y) throws IllegalArgumentException{
+        public int division(int x, int y) throws IllegalArgumentException{
 
 
             return 0;
 
+        }
+        public int modular(int x, int y){
+            return 0;
         }
 
     }
