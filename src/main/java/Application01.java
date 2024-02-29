@@ -20,7 +20,7 @@ public class Application01 {
             s = st.nextToken().charAt(0);
             y = Integer.parseInt(st.nextToken());
 
-            System.out.print(" = ");
+            System.out.print("Output: ");
 
             switch(s){
                 case '+' :
@@ -46,15 +46,7 @@ public class Application01 {
             }
 
         }
-
-        // 스캐너로 데이터 입력
-
-
-
     }
-
-
-    // 사칙연산
 
 
     public static class Calculator{
@@ -73,8 +65,7 @@ public class Application01 {
 
         public static void division(int x, int y) throws IllegalArgumentException{
            if(y == 0){
-               System.out.println("연산 불가능");
-               throw new IllegalArgumentException();
+               throw new IllegalArgumentException("IllegalArgumentException");
            }
             System.out.println(x/y);
 
@@ -82,8 +73,7 @@ public class Application01 {
         }
         public static void modulor(int x, int y) throws IllegalArgumentException {
             if(y==0){
-                System.out.println("연산 불가능");
-                throw new IllegalArgumentException();
+                throw new IllegalArgumentException("IllegalArgumentException");
             }
             System.out.println(x%y);
         }
