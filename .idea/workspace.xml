@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6f68b296-b000-42f8-bfa2-58e031e8209b" name="Changes" comment="[Initial commit]" />
+    <list default="true" id="6f68b296-b000-42f8-bfa2-58e031e8209b" name="Changes" comment="[Initial commit]">
+      <change beforePath="$PROJECT_DIR$/src/main/java/Application01.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Application01.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,7 +42,7 @@
     "Gradle.untitled folder [:Application01.main()].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "ken",
+    "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
