@@ -14,35 +14,54 @@ public class Application01 {
             System.out.println("ex) x + y"); // format
             System.out.println("Exit: 0"); // to exit
             System.out.print("Input: ");
-            st = new StringTokenizer(br.readLine());
-            x = Integer.parseInt(st.nextToken());
-            if(x == 0) break;
-            s = st.nextToken().charAt(0);
-            y = Integer.parseInt(st.nextToken());
+            String str = br.readLine();
+            if(str.indexOf(" ") ==1 && str.lastIndexOf(" ")==3 ) {
+                st = new StringTokenizer(str);
+                x = Integer.parseInt(st.nextToken());
+                if (x == 0) break;
+                s = st.nextToken().charAt(0);
+                y = Integer.parseInt(st.nextToken());
 
-            System.out.print("Output: ");
+                System.out.print("Output: ");
 
-            switch(s){
-                case '+' :
-                    Calculator.add(x,y);
-                    break;
+                switch (s) {
+                    case '+':
+                        Calculator.add(x, y);
+                        break;
 
-                case '-' :
-                    Calculator.subtract(x, y);
-                    break;
+                    case '-':
+                        Calculator.subtract(x, y);
+                        break;
 
-                case '*':
-                    Calculator.multiply(x,y);
-                    break;
+                    case '*':
+                        Calculator.multiply(x, y);
+                        break;
 
-                case '/':
-                    Calculator.division(x,y);
-                    break;
+                    case '/':
+                        try {
+                            Calculator.division(x, y);
+                        } catch (IllegalArgumentException e) {
+                            System.out.println(e.getMessage());
+                        }
+                        break;
 
-                case '%':
-                    Calculator.modulor(x,y);
-                    break;
+                    case '%':
+                        try {
+                            Calculator.modular(x, y);
+                        } catch (IllegalArgumentException e) {
+                            System.out.println(e.getMessage());
+                        }
 
+                        break;
+                    default:
+                        System.out.println("wrong operation symbol");
+                        break;
+
+                }
+
+            }
+            else {
+                System.out.println("input data don't have empty try again");
             }
 
         }
@@ -69,19 +88,34 @@ public class Application01 {
         }
 
 
-        public static void division(int x, int y) throws IllegalArgumentException{
-           if(y == 0){
-               throw new IllegalArgumentException("IllegalArgumentException");
-           }
-            System.out.println(x/y);
-
-
-        }
-        public static void modulor(int x, int y) throws IllegalArgumentException {
-            if(y==0){
-                throw new IllegalArgumentException("IllegalArgumentException");
+//        public static void division(int x, int y) throws IllegalArgumentException{
+//           if(y == 0){
+//               throw new IllegalArgumentException("IllegalArgumentException");
+//           }
+//            System.out.println(x/y);
+//
+//
+//        }
+        public static void division(int x , int y ) {
+            try{
+                System.out.println(x/y);
+            }catch(ArithmeticException e){
+                throw new IllegalArgumentException("division by 0 is not allowed try again");
             }
-            System.out.println(x%y);
+        }
+//        public static void modulor(int x, int y) throws IllegalArgumentException {
+//            if(y==0){
+//                throw new IllegalArgumentException("IllegalArgumentException");
+//            }
+//            System.out.println(x%y);
+//        }
+
+        public static void modular (int x , int y){
+            try{
+                System.out.println(x%y);
+            }catch(ArithmeticException e){
+                throw new IllegalArgumentException("modular by 0 is not allowed try again");
+            }
         }
 
 
