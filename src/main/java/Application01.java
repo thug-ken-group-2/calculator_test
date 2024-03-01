@@ -7,23 +7,29 @@ public class Application01 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st;
+        String yesAnswer;
         double x, y;
         int xi, yi;
         char s;
         while (true) {
             System.out.println();
-            System.out.println("ex) x + y"); // format
-            System.out.println("Exit: 0"); // to exit
+            System.out.println("Integer Calculator : ex) x + y"); // format
+            System.out.println("Exit ? : write Yes"); // to exit
             System.out.print("Input: ");
 
 
             st = new StringTokenizer(br.readLine());
 
             try {
-                x = Calculator.rightsignal(st.nextToken());
+                yesAnswer = st.nextToken();
+                if(yesAnswer.toLowerCase().equals("yes")){
+                    break;
+                }
+                Calculator.lengthProblem(st);
+                x = Calculator.rightsignal(yesAnswer);
                 xi =(int)x;
 //                x = Integer.parseInt(st.nextToken());
-                if (xi == 0) break;
+
                 s = st.nextToken().charAt(0);
 //                y = Integer.parseInt(st.nextToken());
                 y = Calculator.rightsignal(st.nextToken());
@@ -67,6 +73,8 @@ public class Application01 {
 
 
             } catch (IllegalArgumentException e) {
+                System.out.println(e.getMessage());
+            } catch (RuntimeException e){
                 System.out.println(e.getMessage());
             }
 
@@ -132,6 +140,12 @@ public class Application01 {
                 throw new IllegalArgumentException("wrong input try again");
 
             }
+        }
+        public static void lengthProblem(StringTokenizer st){
+            if(st.countTokens() < 2 ){
+                throw new RuntimeException("wrong input try again");
+            }
+
         }
 
 
