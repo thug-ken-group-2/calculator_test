@@ -13,7 +13,7 @@ public class Application01 {
         char s;
         while (true) {
             System.out.println();
-            System.out.println("Integer Calculator : ex) x + y"); // format
+            System.out.println("Integer Calculator with Two numbers : ex) x + y"); // format
             System.out.println("Exit ? : write Yes"); // to exit
             System.out.print("Input: ");
 
@@ -142,7 +142,7 @@ public class Application01 {
             }
         }
         public static void lengthProblem(StringTokenizer st){
-            if(st.countTokens() < 2 ){
+            if(st.countTokens() != 2 ){
                 throw new RuntimeException("wrong input try again");
             }
 
